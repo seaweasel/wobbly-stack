@@ -17,10 +17,7 @@ app.get('/autodeploy', (req, resp) =>{
 });
 
 app.get('/anotherone', (req, resp)=>{
-   // what's in the request?
-
    resp.send('YOU LOYAL');
-
 });
 
 
