@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/', (req, resp) =>{
-   resp.send('HELLOOOOOOOO NURSE');
+   resp.send('IT"S KILLING ME');
 });
 
 app.get('/caketime', (req, resp) =>{
@@ -14,6 +14,13 @@ app.get('/caketime', (req, resp) =>{
 
 app.get('/autodeploy', (req, resp) =>{
    resp.send('IT WORKED');
+});
+
+app.get('/anotherone', (req, resp)=>{
+   // what's in the request?
+
+   resp.send('YOU LOYAL');
+
 });
 
 
