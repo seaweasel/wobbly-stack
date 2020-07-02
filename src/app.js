@@ -12,6 +12,10 @@ app.get('/caketime', (req, resp) =>{
    resp.send('HAVE SOME CAKE')
 })
 
+app.get('/autodeploy', (req, resp) =>{
+   resp.send('IT WORKED');
+});
+
 
 module.exports = app;
 
