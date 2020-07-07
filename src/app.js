@@ -13,8 +13,8 @@ app.get('', (req, resp) =>{
    resp.render('index.hbs');
 })
 
-app.get('/old', (req, resp) =>{
-   resp.send('SUP HOMIE');
+app.get('/jumbotron', (req, resp) =>{
+   resp.render('jumbotron.hbs');
 });
 
 module.exports = app;
