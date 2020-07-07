@@ -1,26 +1,20 @@
 const express = require('express');
+const path = require('path');
+const hbs = require('hbs');
 
 const app = express();
 
 app.use(express.json());
+//views engine and template location
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, '../templates/views'));
 
-app.get('/', (req, resp) =>{
-   resp.send('IT"S KILLING ME');
-});
-
-app.get('/caketime', (req, resp) =>{
-   resp.send('HAVE SOME CAKE')
+app.get('', (req, resp) =>{
+   resp.render('index.hbs');
 })
 
-app.get('/autodeploy', (req, resp) =>{
-   resp.send('IT WORKED');
+app.get('/old', (req, resp) =>{
+   resp.send('SUP HOMIE');
 });
-
-app.get('/anotherone', (req, resp)=>{
-   resp.send('YOU LOYAL');
-});
-
 
 module.exports = app;
-
-
