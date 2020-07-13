@@ -17,4 +17,8 @@ app.get('/jumbotron', (req, resp) =>{
    resp.render('jumbotron.hbs');
 });
 
+app.get('/card', (req, resp) =>{
+   resp.render('card.hbs')
+})
+
 module.exports = app;
