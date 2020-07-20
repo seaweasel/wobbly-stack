@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 
+const cloudflare = require('./routes/cdn')
+
 const app = express();
 
 app.use(express.json());
@@ -20,5 +22,7 @@ app.get('/jumbotron', (req, resp) =>{
 app.get('/card', (req, resp) =>{
    resp.render('card.hbs')
 })
+
+app.use(cloudflare);
 
 module.exports = app;
